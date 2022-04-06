@@ -26,78 +26,80 @@
         }
     </script>
     <style>
-        body {background-color: #333333; font-family: Arial, sans-serif; font-size: 1.75em;}
-        .tg  {border-collapse:collapse;border-spacing:0;margin: auto;background-color: aliceblue;color: #333333; border-radius: 10px; width: 95%;}
+        body, html {background-color: aliceblue; font-family: Arial, sans-serif; font-size: 42px; margin: 0 auto; max-width: 100%; width: auto;}
+        .tg  {border-collapse:collapse;border-spacing:0;margin: auto;color: #333333;width: 100%;}
         .tg td{border-style:hidden;border-width:1px;
             overflow:hidden;padding:15px 5px;word-break:normal;}
         .tg th{border-style:hidden;border-width:1px;
             font-weight:normal;overflow:hidden;padding:20px 5px;word-break:normal;}
         .tg .tg-0lax{text-align:center;vertical-align:top}
-        input {font-size: 1.75em;}
-        button {font-size: 1.75em}
+        input {font-size: 42px;}
+        button {font-size: 42px}
     </style>
 </head>
 <body>
-<table class="tg">
-    <thead>
-    <tr>
-        <th class="tg-0lax" colspan="2" style="background-color: #111111; border-radius: 10px 10px 0 0; color: #ffd800;">Binance Spot</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td class="tg-0lax" colspan="2">Купувати ше</td>
-    </tr>
-    <tr>
-        <td class="tg-0lax">
-            <span style="color: red;">-2.5%</span>
-            <input id="-2-5" type="text" size="10">
-        </td>
-        <td class="tg-0lax">
-            <span style="color: red;">-5%</span>
-            <input id="-5" type="text" size="10">
-        </td>
-    </tr>
-    <tr>
-        <td class="tg-0lax">
-            <span style="color: red;">-7.5%</span>
-            <input id="-7-5" type="text" size="10">
-        </td>
-        <td class="tg-0lax">
-            <span style="color: red;">-10%</span>
-            <input id="-10" type="text" size="10">
-        </td>
-    </tr>
-    <tr>
-        <td class="tg-0lax" colspan="2">Продавати</td>
-    </tr>
-    <tr>
-        <td class="tg-0lax">
-            <span style="color: green;">+5%</span>
-            <input id="+5" type="text" size="10">
-        </td>
-        <td class="tg-0lax">
-            <span style="color: green;">+10%</span>
-            <input id="+10" type="text" size="10">
-        </td>
-    </tr>
-    <tr>
-        <td class="tg-0lax" colspan="2">Початкова ціна</td>
-    </tr>
-    <tr>
-        <td class="tg-0lax" colspan="2">
-            <input style="text-align: center;" id="val" type="text" size="40">
-        </td>
-    </tr>
-    <tr>
-        <td class="tg-0lax">
-            <button onclick="calculate()">Розрахувати</button>
-        </td>
-        <td class="tg-0lax">
-            <button onclick="reset()">Скинути</button>
-        </td>
-    </tr>
-    </tbody>
-</table>
+<div id="wrap">
+    <table class="tg">
+        <thead>
+        <tr>
+            <th class="tg-0lax" colspan="2" style="background-color: #111111; color: #ffd800;">Binance Spot Calculator</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="tg-0lax" colspan="2">Купувати ше</td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <span style="color: red;">-2.5%</span>
+                <input id="-2-5" type="text" size="10">
+            </td>
+            <td class="tg-0lax">
+                <span style="color: red;">-5%</span>
+                <input id="-5" type="text" size="10">
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <span style="color: red;">-7.5%</span>
+                <input id="-7-5" type="text" size="10">
+            </td>
+            <td class="tg-0lax">
+                <span style="color: red;">-10%</span>
+                <input id="-10" type="text" size="10">
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax" colspan="2">Продавати</td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <span style="color: green;">+5%</span>
+                <input id="+5" type="text" size="10">
+            </td>
+            <td class="tg-0lax">
+                <span style="color: green;">+10%</span>
+                <input id="+10" type="text" size="10">
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax" colspan="2">Початкова ціна</td>
+        </tr>
+        <tr>
+            <td class="tg-0lax" colspan="2">
+                <input style="text-align: center;" id="val" type="text" size="40">
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <button onclick="calculate()">Розрахувати</button>
+            </td>
+            <td class="tg-0lax">
+                <button onclick="reset()">Скинути</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
