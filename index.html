@@ -6,12 +6,19 @@
     <script>
         function calculate() {
             var num = Number(document.getElementById("val").value);
-            document.getElementById("-2-5").value = num - (num * 0.025);
-            document.getElementById("-5").value = num - (num * 0.05);
-            document.getElementById("-7-5").value = num - (num * 0.075);
-            document.getElementById("-10").value = num - (num * 0.1);
-            document.getElementById("+5").value = num + (num * 0.05);
-            document.getElementById("+10").value = num + (num * 0.1);
+            var num_len = String(num).length;
+            var a = String(num - (num * 0.025));
+            var b = String(num - (num * 0.05));
+            var c = String(num - (num * 0.075));
+            var d = String(num - (num * 0.1));
+            var e = String(num + (num * 0.05));
+            var f = String(num + (num * 0.1));
+            document.getElementById("-2-5").value = a.substring(0, num_len)
+            document.getElementById("-5").value = b.substring(0, num_len)
+            document.getElementById("-7-5").value = c.substring(0, num_len)
+            document.getElementById("-10").value = d.substring(0, num_len)
+            document.getElementById("+5").value = e.substring(0, num_len)
+            document.getElementById("+10").value = f.substring(0, num_len)
             document.getElementById("val").value = "Розраховано";
         }
 
@@ -61,7 +68,7 @@
                 <input class="input-red" id="-2-5" type="text" size="10">
             </td>
             <td class="tg-0lax">
-                <span style="color: red;">- 5%</span>
+                <span style="color: red;">-5.0%</span>
                 <input class="input-red" id="-5" type="text" size="10">
             </td>
         </tr>
@@ -80,7 +87,7 @@
         </tr>
         <tr>
             <td class="tg-0lax">
-                <span style="color: green;">+ 5%</span>
+                <span style="color: green;">+5.0%</span>
                 <input class="input-green" id="+5" type="text" size="10">
             </td>
             <td class="tg-0lax">
